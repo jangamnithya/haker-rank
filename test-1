@@ -1,0 +1,17 @@
+import re
+
+def extract_pincode(address):
+    # Regex to match a valid Indian PIN code with given conditions
+    pattern = r"\b[1-9][0-9]{2}\s?[0-9]{3}\b"
+
+    match = re.search(pattern, address)
+
+    if match:
+        print(match.group().replace(" ", ""))  # Remove space if present
+    else:
+        print("-1")
+
+
+address = "Flat No. 12B, Green Heights, Mumbai-400076, India"
+extract_pincode(address)
+     

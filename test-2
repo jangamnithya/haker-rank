@@ -1,0 +1,14 @@
+n=int(input())
+count=0
+sum1=0
+while n>0:
+    rem=n%10
+    n=n//10
+    count+=1
+    if(count==1 or count==3 or count==8 or count==10):
+        sum1=sum1+rem
+print(sum1)
+if(sum1%3==0):
+    print("Success")
+else:
+    print("Failed")
